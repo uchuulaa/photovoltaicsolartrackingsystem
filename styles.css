@@ -1,0 +1,658 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    padding: 0 1%;
+    font-family: 'Arial', sans-serif;
+    background-color: #e2eff7; /* Light gray background */
+    color: #333;
+    max-width: 98%;
+
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f2432; /* Blue header background */
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo img {
+    max-width: 80px; /* Slightly smaller logo size */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 15px; /* Reduced margin between navigation items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 18px; /* Slightly larger font size */
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Slideshow Styles */
+#slideshow {
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-position: center;
+    animation: slideshow 150s infinite; /* Adjust the time as needed for your preference */
+    transition: background-size 1s ease; /* Add a transition effect */
+    margin-bottom: 50 px;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('https://images.prismic.io/palmettoblog/11712d41-42f1-4d64-93b1-9a0a05920f70_sun-tracking-solar-panels.jpg?auto=compress,format&rect=0,0,1200,800&w=1200&h=800'); }
+    25% { background-image: url('https://3.imimg.com/data3/GO/IJ/MY-13738595/solar-trackers-500x500.jpg'); }
+    50% { background-image: url('https://previews.123rf.com/images/3rus/3rus2006/3rus200601639/149237675-solar-panel-sun-logo-template-save-energy-green-power-and-natural-electricity-solar-battery.jpg'); }
+    75% { background-image: url('https://7668309.fs1.hubspotusercontent-na1.net/hubfs/7668309/The%20Future%20of%20Green%20Energy%20is%20Now_eBook%20Cover%20Image.jpg'); }
+    100% { background-image: url('https://images.unsplash.com/photo-1585753873631-edfe0723fc46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHNwbGFzaHxlbnwwfHwwfHx8MA%3D%3D'); }
+}
+
+/* Body Content Styles */
+.intro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #042c49; /* Blue heading color */
+}
+
+#home {
+    position: relative;
+    color: #033b60;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#home.container {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    margin: 0;
+  }
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    padding: 15px 25px; /* Larger button padding */
+    border: none;
+    border-radius: 8px; /* More rounded button corners */
+    font-size: 20px; /* Larger button font size */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-section {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Philosophy styles */
+#philosophy {
+    background-color: #f7f7f7;
+    padding: 40px;
+  }
+  
+  #philosophy h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #philosophy p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  #philosophy div {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #777;
+  }
+  
+  #philosophy div:before {
+    content: "✓";
+    display: inline-block;
+    margin-right: 10px;
+    color: #ff9900;
+  }
+  
+  #philosophy p:last-child {
+    margin-bottom: 0;
+  }
+
+#gallery {
+    padding: 40px;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-container img {
+    max-width: 300px;
+    max-height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 8px; /* Optional: add border-radius for rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+
+/* display 
+#display {
+    background-color: ;
+
+}*/
+
+#status {
+    display: block;
+    align-items: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px 0;
+}
+
+#loading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4 px solid #007bff;
+    border-radius: 50%;
+    margin: 10px auto;
+    position: relative;
+    animation: load 1s linear infinite;
+}
+
+#loading::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 50%;
+    height: 50%;
+    background-color: #00ff00;
+    border-radius: 50%;
+    clip-path: polygon(100% 0%, 0% 0%, 0% 100%);
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+#display.arduinoData {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#features {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    margin-top: 50px;
+}
+
+#features h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#features ul li {
+    flex: 0 0 calc(33.3333% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#features ul li:hover {
+    transform: scale(1.05);
+}
+
+#features h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+#features p {
+    color: #777;
+    line-height: 1.6;
+    padding: 0 20px 20px;
+}
+
+#features .feature-icon {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #3498db;
+}
+
+/* Social Media Styles */
+.social-media {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #3498db; /* Adjust the color to your preference */
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: #e8137d; /* Adjust the hover color to your preference */
+    transform: scale(1.2);
+}
+
+/* Footer Navigation Styles */
+footer nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer nav a:hover {
+    color: #3498db;
+}
+
+ /* About Us Section Styles */
+ #about {
+    width: fit-content;
+    background-color: #ecf0f1;
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+  }
+
+  .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .team-member {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-member img {
+    max-width: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .team-member h3 {
+    color: #3498db;
+  }
+  p {
+    margin: 10px auto; /* Center the paragraphs horizontally */
+    line-height: 1.5;
+    max-width: 620px; /* Set a maximum width for the paragraphs */
+  }
+/* Add media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+      padding: 0 2%;
+    }
+  
+    .logo img {
+      max-width: 60px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    #slideshow {
+      height: 300px;
+    }
+  
+    .team-member {
+      width: 100%;
+    }
+  
+    #home.container {
+      padding: 30px 10px;
+    }
+  
+    .cta-button {
+      font-size: 16px;
+    }
+  
+    #philosophy {
+      padding: 20px;
+    }
+  
+    #gallery {
+      padding: 20px;
+    }
+  
+    .photo-container img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    #features ul li {
+      flex: 0 0 calc(50% - 20px);
+    }
+  
+    .social-media a {
+      font-size: 20px;
+    }
+  }
+
+  /* Styles for mobile */
+@media (max-width: 768px) {
+    .team-member {
+      width: 100%;
+    }
+    
+    .team-member img {
+      max-width: 50px;
+    }
+    
+    .contact-section {
+      padding: 30px 20px;
+    }
+    
+    .footer {
+      padding: 10px;
+    }
+  }
+/* Key Features Section Styles */
+.features-section {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-list li {
+    flex: 0 0 calc(50% - 20px);
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-list li:hover {
+    transform: scale(1.05);
+}
+
+.feature-details {
+    padding: 20px;
+}
+
+.real-time-monitoring {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.real-time-monitoring h3 {
+    color: #3498db;
+}
+
+/* Benefits Section Styles */
+.benefits-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.benefit i {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* Services Section Styles */
+.services-section {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Contact Us Section Styles */
+.contact-section {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center content */
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+#email,
+#phone {
+    font-weight: bold;
+    color: #3498db;
+}
+
+
+/*Form styles*/
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #45a049;
+}
+
+/*@media (max-width: 600px){
+
+}*/
